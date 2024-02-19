@@ -3,4 +3,4 @@ project(FullStackDeveloperManagePizzas)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(FullStackDeveloperManagePizzas pizza.cpp defns.h)
+add_executable(FullStackDeveloperManagePizzas pizza.cpp)
