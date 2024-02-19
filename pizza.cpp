@@ -58,7 +58,6 @@ void add_topping() { // function for adding a topping to the list
     toppings_menu();
 }
 void delete_topping() { // function for deleting a topping from the list
-    vector<string> debug_toppings = list_of_toppings;
     cout << "Enter Name of Topping to Delete: ";
     cin.ignore();
     getline(cin, topping);
@@ -133,8 +132,6 @@ void display_pizzas() { // function to display list of pizzas and their toppings
     }
 }
 void create_pizza() { // function to create a pizza and add toppings to it
-    vector<string> debug_toppings = list_of_toppings;
-    unordered_map<string, vector<string>> debug_pizzas = list_of_pizzas;
     cout << "Enter Name of Pizza to Create: ";
     cin.ignore();
     getline(cin, pizza_name);
@@ -248,7 +245,6 @@ void add_toppings_to_current_pizza() {
 }
 void update_toppings_from_current_pizza() {
     vector<string> temp_toppings;
-    vector<string> temp;
     cout << "Enter Name of Pizza to Update Toppings From: ";
     cin.ignore();
     getline(cin, pizza_name);
@@ -261,8 +257,6 @@ void update_toppings_from_current_pizza() {
                 getline(cin, topping);
                 cout << "Enter Name of Topping to Replace it with (press q to stop entering toppings): ";\
                 getline(cin, updated_topping);
-                temp = list_of_pizzas.find(pizza_name)->second;
-                //for(int i = 0; )
                 if (!list_of_toppings.empty() && updated_topping != "q") {
                     if (find(list_of_toppings.begin(), list_of_toppings.end(), updated_topping) ==
                         list_of_toppings.end()) {
